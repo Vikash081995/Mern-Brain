@@ -9,6 +9,8 @@ const userSchema = new Schema({
   username: {
     type: String,
     required: [true, "Please tell your name!"],
+    minLength: 3,
+    maxLength: 50,
   },
   email: {
     type: String,

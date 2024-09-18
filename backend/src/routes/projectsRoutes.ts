@@ -2,7 +2,7 @@ import { Router } from "express";
 const router = Router();
 
 import {
-  getSingProject,
+  getSingleProject,
   createProjects,
   deleteProject,
   updateProject,
@@ -13,5 +13,5 @@ router.route("/").post(createProjects).get(getAllProjects);
 router
   .route("/:id")
   .patch(updateProject)
-  .get(getSingProject)
+  .get(getSingleProject)
   .delete(deleteProject);

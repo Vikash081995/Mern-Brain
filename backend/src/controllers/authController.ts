@@ -11,7 +11,6 @@ export const Signup = asyncWrapper(async (req, res, next) => {
   if (!email || !name || !password) {
     throw new BadRequestError("Please provide name, email,password");
   }
-
   const emailAlreadyExists = await User.findOne({ email });
   if (emailAlreadyExists) {
     throw new BadRequestError("Email already exists");
@@ -37,7 +36,7 @@ export const Login = asyncWrapper(async (req, res, next) => {
 
   if (!user) {
     throw new UnauthenticatedError("Invalid credentials");
-  }
+  } 
   // const isPasswordCorrect = await User.comparePassword(password);
 
   // if (!isPasswordCorrect) {

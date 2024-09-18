@@ -1,6 +1,6 @@
 import { NextFunction, Response, Request } from "express";
 
-export const getSingProject = async (
+export const getSingleProject = async (
   req: Request,
   res: Response,
   next: NextFunction
