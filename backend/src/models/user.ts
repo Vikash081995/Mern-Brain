@@ -19,7 +19,7 @@ const userSchema = new Schema({
     lowercase: true,
     validate: {
       validator: validator.isEmail,
-      message: "Please providde email",
+      message: "Please provide email",
     },
   },
   photo: String,
