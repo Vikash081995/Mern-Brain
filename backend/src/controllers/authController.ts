@@ -22,7 +22,7 @@ export const Signup = asyncWrapper(async (req, res, next) => {
 
   res.status(StatusCodes.CREATED).json({
     status: "success",
-    data: { user: { name } },
+    data: { user: tokenUser },
   });
 });
 
@@ -36,7 +36,7 @@ export const Login = asyncWrapper(async (req, res, next) => {
 
   if (!user) {
     throw new UnauthenticatedError("Invalid credentials");
-  } 
+  }
   // const isPasswordCorrect = await User.comparePassword(password);
 
   // if (!isPasswordCorrect) {
